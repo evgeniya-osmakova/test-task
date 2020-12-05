@@ -1,0 +1,71 @@
+@import '../common.scss';
+
+$btn-color: #FFC945;
+
+.save-as {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info {
+    text-align: center;
+  }
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    margin: auto;
+  }
+}
+
+.btn {
+  margin: 15px;
+  min-width: 175px;
+  border-radius: 10px;
+  padding: 6px 8px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  background: $btn-color;
+  color: #ffffff;
+  border: 2px solid $btn-color;
+  font-weight: 700;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 10px;
+  }
+
+  &--error {
+    cursor: not-allowed;
+    background: rgba($btn-color, 0.5);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    border: 2px solid $btn-color;
+  }
+
+  &:active {
+    border-color: #f7f6f5;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: #ffffff;
+
+  &--error {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
